@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cameraview_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.example.seesign.CameraView
+            android:layout_width="match_parent"
+            android:id="@+id/camera_activity_view"
+            android:layout_height="0dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:background="@drawable/round_button"
+        android:layout_centerInParent="true"
+        android:text="@string/camera_button"
+        android:id="@+id/camera_capture_button"
+        android:layout_below="@+id/threshold_toggle_button"/>
+
+    <Button
+        android:id="@+id/camera_flash_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/threshold_toggle_button"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="29dp"
+        android:layout_toEndOf="@+id/camera_capture_button"
+        android:background="@drawable/round_button"
+        android:text="@string/camera_button"
+        android:foreground="@drawable/ic_flash_24dp" />
+
+    <Button
+        android:id="@+id/threshold_toggle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/seekbarCb"
+        android:text="Threshold"/>
+
+    <SeekBar
+        android:id="@+id/seekbarCr"
+        android:max="255"
+        android:progress="170"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cameraview_constraint"/>
+
+    <SeekBar
+        android:id="@+id/seekbarCb"
+        android:max="255"
+        android:progress="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbarCr"/>
+</RelativeLayout>

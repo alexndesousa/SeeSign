@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gestures arent being recognised correctly."
+                    android:textSize="17sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="There are various reasons why SeeSign may not be correctly translating gestures. Below is a list of potential reasons and solutions:"/>
+
+                <LinearLayout
+                    android:id="@+id/bullet_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• The subject is too far away. Try to move closer to them, ensuring that their hands are as large as possible in the camera."/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• The camera is dirty. Try cleaning the camera."/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• SeeSign hasn't been calibrated properly. Try to access the calibration settings and move the sliders until the subjects hands are the only thing you can see."/>
+
+                </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="I can't calibrate SeeSign to the subjects hands!"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="There are a couple of reasons as to why you may be unable to calibrate it to the users hands. The main reason would be due to being in an exceptionally dark environment. If this is the case you should try to turn on the flash and see if you can segment them better.
+The other reason would be due to difficulty in figuring out how to use the sliders. The best way to use them is to start them both off in the middle and move one at a time. Once you can see a bit of the users hand, adjust the other slider until their hands are at their most visible. You can then adjust the initial slider again if necessary further increase the quality of the calibration."/>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
